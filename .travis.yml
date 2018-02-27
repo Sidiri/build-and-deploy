@@ -1,11 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  skip_cleanup: true
+  provider: heroku
+  app: sindre-build-and-deploy
+  api_key:
+    secure: U6KSapxl/y42crr8Bvwx9ioInwE27Icr6ywb+e8nsobJu0n7y8RE6CEy7tOYHE/q14EdclnCt+bb2Z/CJNVWr2gvbgbJC7RlJV1dj/jGvgzWUd2jX8mLfKH4Qp8duUKSB7WytbFO6ec2shyeyaoaDrqvYICnoh5SWbET03fL/ZWs34dQcRnLgQW6h90fbLF5u5VmaP8yq9DD0w5Ot+IpNXwblv4wUzoVkMdK/FmVYh5h2unxyfa78s4wLGfRKKTX3nxQZ0eUXhNOwmSaPP30F+VeSLMkqOvfyHXPHU0cYaVpi4HP5E/FRhlong0nIE2YXRD/dxAh/sKKOcyn1d6p1rAEYpOue4kiZOT4XSAwUZKXKaAahpkeWnD2q9/OVDvgLREKMdifcIR1cNBHP+kzKrzZ2UTv/Z/Rd5n4cwSLe+0SSFDDDMLk5ZcL2MYSpuTwuYPo5ecQgR5PWdDO6iM+gSzLNiFJcUViD7K6auj6yYdlaD/qO/WHLfqannyCTH0HhwanqLMjmHi+pGtH2lOnWZ5wBdytlIIRp8RQF1N2kFL8WJuwE/XP5EQgEUzBDAry9XCyK8nGlPFZxeqa7Cryo3xzrgLqxDtJSeXi5+kGUGXyG0tym1jtwhXwR86s5rcPiAeIgZg4jxX2l8N+gHKtEq/C8QZiiQqUvbX3lC7oCKo=
